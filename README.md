@@ -15,7 +15,7 @@ An AI coding agent (Claude Code, Codex CLI, Gemini CLI) can read a Markdown file
 1. Write a text file describing your tests.
 2. Tell your agent to run them.
 
-That's the whole workflow. No CLI to install, no configuration, no conventions to learn.
+That's the whole workflow. All you need is an agent CLI.
 
 ### Example
 
