@@ -20,20 +20,18 @@ That's the whole workflow. All you need is an agent CLI.
 ### Example
 
 ```markdown
-## Add to Cart
+## Version Command
 
-1. Navigate to /products/widget-a
-2. Click "Add to Cart"
-3. Verify the cart badge shows 1 item
-4. Open the cart page
-5. Verify Widget A appears at $29.99
+1. Run `mytool --version`
+2. Verify the command exits with status 0
+3. Verify output matches a semantic version (for example, `1.4.2`)
 
-## Apply Coupon
+## Help Command
 
-1. Add any product to the cart
-2. Enter coupon code `SAVE20` in the discount field
-3. Click "Apply"
-4. Verify the discount is 20% off the original price
+1. Run `mytool --help`
+2. Verify the command exits with status 0
+3. Verify output includes `Usage:`
+4. Verify output lists the `init` command
 ```
 
 Then tell your agent: "run the tests in `tests/smoke.md`."
