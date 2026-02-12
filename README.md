@@ -116,10 +116,12 @@ The agent reads the referenced file and follows its steps before continuing. It'
 You can run Markdown tests in CI too. Use your agent's batch mode and have it signal pass/fail however suits your pipeline. For example:
 
 ```bash
-claude --dangerously-skip-permissions \
-       -p "Run the tests in tests/smoke.md. If all pass, write 'pass' to /tmp/result. If any fail, write 'fail' to /tmp/result."
+result=$(claude --dangerously-skip-permissions \
+  -p "$(cat tests/smoke.md)
 
-result=$(cat /tmp/result)
+## Output
+Respond with only 'pass' or 'fail'.")
+
 if [ "$result" != "pass" ]; then
   exit 1
 fi
