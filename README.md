@@ -20,18 +20,13 @@ That's the whole workflow. All you need is an agent CLI.
 ### Example
 
 ```markdown
-## Version Command
+## New Project Setup
 
-1. Run `mytool --version`
-2. Verify the command exits with status 0
-3. Verify output matches a semantic version (for example, `1.4.2`)
-
-## Help Command
-
-1. Run `mytool --help`
-2. Verify the command exits with status 0
-3. Verify output includes `Usage:`
-4. Verify output lists the `init` command
+1. Run `mytool init myproject`
+2. Verify a `myproject` directory was created
+3. Verify the directory contains a config file with sensible defaults
+4. `cd` into the directory and run `mytool status`
+5. Verify the output shows the project is initialized and has no errors
 ```
 
 Then tell your agent: "run the tests in `tests/smoke.md`."
@@ -40,7 +35,7 @@ The agent reads the file, does what it says, and reports back.
 
 ### Tips
 
-**Be precise.** The more specific your instructions, the more reliable the execution. "Verify the page loads correctly" is vague. "Verify the page title is 'Dashboard' and the welcome banner is visible" is testable. If a human tester could follow your instructions without asking questions, an agent can too.
+**Be as precise as you need to be.** Vague assertions like "verify the output looks correct" are fine — that's the point, the agent uses judgment. But don't be so vague that a human tester couldn't follow the steps either. "Verify the page works" is too loose. "Verify the page title is 'Dashboard' and the welcome banner is visible" is specific when you need it to be. Match the precision to how much you care.
 
 **Ask the agent to lint your tests.** Before running, ask: "review these test steps for ambiguity." The agent will flag vague assertions, implicit assumptions, and missing context.
 
