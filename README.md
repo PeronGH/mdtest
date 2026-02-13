@@ -10,6 +10,14 @@ Tests written as code are precise but expensive to write and maintain, especiall
 
 An AI coding agent (Claude Code, Codex CLI, Gemini CLI) can read a Markdown file, execute the described steps, and tell you whether things worked. For the agent, it's manual testing. For you, it's automatic.
 
+## Use as a Skill
+
+If you use the [`skills`](https://www.npmjs.com/package/skills) CLI:
+
+```bash
+npx skills add PeronGH/mdtest
+```
+
 ## Getting Started
 
 1. Write a text file describing your tests.
