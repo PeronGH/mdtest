@@ -16,13 +16,20 @@ Do not use markdown tests as a permanent replacement for coded tests. Once a fea
 
 ## Writing tests
 
-A test file is a Markdown document with numbered steps. Each step is either an action or a verification.
+A test file is a Markdown document with numbered steps. Each step is either an action or a verification. A single file can cover multiple features — use headings to separate them.
 
 ```markdown
-## Feature Name
+# User Management
 
-1. Do something specific
-2. Verify the expected outcome
+## Create a user
+
+1. Register a new user with valid details
+2. Verify the user appears in the user list
+
+## Delete a user
+
+1. Delete the user created above
+2. Verify the user is no longer in the list
 ```
 
 ### Precision

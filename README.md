@@ -28,14 +28,21 @@ That's the whole workflow. All you need is an agent CLI.
 ### Example
 
 ```markdown
-## New Project Setup
+# Project Setup
+
+## Initialize
 
 1. Run `mytool init myproject`
 2. Verify a `myproject` directory was created
 3. Verify the directory contains a config file with sensible defaults
-4. `cd` into the directory and run `mytool status`
-5. Verify the output shows the project is initialized and has no errors
+
+## Status Check
+
+1. `cd` into the project directory and run `mytool status`
+2. Verify the output shows the project is initialized and has no errors
 ```
+
+A single file can cover multiple features — use headings to separate them.
 
 Then tell your agent: "run the tests in `tests/smoke.md`."
 
